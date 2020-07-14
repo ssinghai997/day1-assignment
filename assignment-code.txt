@@ -1,0 +1,144 @@
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment
+$ git init
+Initialized empty Git repository in D:/dotnettraining/day-1-assignment/.git/
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment (master)
+$ code readme.md
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment (master)
+$ code items.txt
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment (master)
+$ code items.html
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment (master)
+$ git add .
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment (master)
+$ git commit -m"create two files readme.md items.txt"
+[master (root-commit) 4d5dc05] create two files readme.md items.txt
+ 2 files changed, 12 insertions(+)
+ create mode 100644 items.html
+ create mode 100644 readme.md
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment (master)
+$ git log --oneline
+4d5dc05 (HEAD -> master) create two files readme.md items.txt
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment (master)
+$ git remote add origin https://github.com/ssinghai997/day1-assignment.git
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment (master)
+$ git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 459 bytes | 459.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ssinghai997/day1-assignment.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment (master)
+$ git checkout -b branch1
+Switched to a new branch 'branch1'
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment (branch1)
+$ code index.txt
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment (branch1)
+$ git add .
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment (branch1)
+$ git commit -m"create new txt file"
+[branch1 9788c33] create new txt file
+ 1 file changed, 4 insertions(+)
+ create mode 100644 index.txt
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment (branch1)
+$ git push origin branch1
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 377 bytes | 377.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'branch1' on GitHub by visiting:
+remote:      https://github.com/ssinghai997/day1-assignment/pull/new/branch1
+remote:
+To https://github.com/ssinghai997/day1-assignment.git
+ * [new branch]      branch1 -> branch1
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment (branch1)
+$ git status
+On branch branch1
+nothing to commit, working tree clean
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment (branch1)
+$ git pull https://github.com/ssinghai997/day1-assignment.git
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 774 bytes | 7.00 KiB/s, done.
+From https://github.com/ssinghai997/day1-assignment
+ * branch            HEAD       -> FETCH_HEAD
+Merge made by the 'recursive' strategy.
+ items.html | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment (branch1)
+$ git checkout branch
+error: pathspec 'branch' did not match any file(s) known to git
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment (branch1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment (master)
+$  git pull https://github.com/ssinghai997/day1-assignment.git
+From https://github.com/ssinghai997/day1-assignment
+ * branch            HEAD       -> FETCH_HEAD
+Updating 4d5dc05..fc6a148
+Fast-forward
+ items.html | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment (master)
+$ git branch
+  branch1
+* master
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment (master)
+$ git merge branch1
+Updating fc6a148..a6bd247
+Fast-forward
+ index.txt | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 index.txt
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment (master)
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 370 bytes | 370.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ssinghai997/day1-assignment.git
+   fc6a148..a6bd247  master -> master
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment (master)
+$ code assignment.txt
+
+WIN10@DESKTOP-OO42D65 MINGW64 /d/dotnettraining/day-1-assignment (master)
+$
